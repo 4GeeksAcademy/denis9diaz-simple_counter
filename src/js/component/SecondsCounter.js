@@ -1,6 +1,7 @@
 import React from "react";
 import Clock from "./Clock";
 import Digit from "./Digit";
+import Buttons from "./Buttons"
 
 const SecondsCounter = (props) => {
 	return (
@@ -11,6 +12,7 @@ const SecondsCounter = (props) => {
 			<div><Digit digit={props.digitThree}/></div>
 			<div><Digit digit={props.digitTwo}/></div>
 			<div><Digit digit={props.digitOne}/></div>
+			<div><Buttons stopCounter={props.stopCounter} restartCounter={props.restartCounter} resetCounter={props.resetCounter} /></div>
 		</div>
 	);
 };

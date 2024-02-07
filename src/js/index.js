@@ -6,6 +6,25 @@ import "../styles/index.css";
 import SecondsCounter from "./component/SecondsCounter.js";
 
 let counter = 0;
+let intervalId;
+let running = true;
+
+const stopCounter = () => {
+    running = false;
+};
+
+const restartCounter = () => {
+    running = true;
+    intervalId = setInterval(updateCounter, 1000);
+};
+
+const resetCounter = () => {
+    running = true;
+    clearInterval(intervalId); 
+    counter = 0;
+    intervalId = setInterval(updateCounter, 1000);
+};
+
 setInterval(()=>{
     const digitFive = Math.floor(counter/10000);
     const digitFour = Math.floor(counter/1000);
@@ -16,7 +35,7 @@ setInterval(()=>{
     console.log(digitFive, digitFour, digitThree, digitTwo, digitOne);
     counter++;
 
-ReactDOM.render(<SecondsCounter digitOne={digitOne} digitTwo={digitTwo} digitThree={digitThree} digitFour={digitFour} digitFive={digitFive}/>, document.querySelector("#app"));
+ReactDOM.render(<SecondsCounter digitOne={digitOne} digitTwo={digitTwo} digitThree={digitThree} digitFour={digitFour} digitFive={digitFive} stopCounter={stopCounter} restartCounter={restartCounter} resetCounter={resetCounter}/>, document.querySelector("#app"));
 },1000);
 
 
