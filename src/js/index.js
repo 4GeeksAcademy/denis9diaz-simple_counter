@@ -1,12 +1,22 @@
-//import react into the bundle
 import React from "react";
 import ReactDOM from "react-dom";
 
-// include your styles into the webpack bundle
 import "../styles/index.css";
 
-//import your own components
-import Home from "./component/home.jsx";
+import SecondsCounter from "./component/SecondsCounter.js";
 
-//render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+let counter = 0;
+setInterval(()=>{
+    const digitFive = Math.floor(counter/10000);
+    const digitFour = Math.floor(counter/1000);
+    const digitThree = Math.floor(counter/100);
+    const digitTwo = Math.floor(counter/10);
+    const digitOne = Math.floor(counter/1);
+    
+    console.log(digitFive, digitFour, digitThree, digitTwo, digitOne);
+    counter++;
+
+ReactDOM.render(<SecondsCounter digitOne={digitOne} digitTwo={digitTwo} digitThree={digitThree} digitFour={digitFour} digitFive={digitFive}/>, document.querySelector("#app"));
+},1000);
+
+
