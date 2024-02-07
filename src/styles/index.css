@@ -28,6 +28,7 @@ body {
 
 .buttonStop {
     font-size: 20px;
+    margin-left: 20px;
 }
 
 .buttonRestart {
@@ -43,3 +44,7 @@ body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
+.digits {
+    width: 50px;
+    text-align: center;
+}
