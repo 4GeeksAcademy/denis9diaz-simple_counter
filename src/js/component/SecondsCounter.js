@@ -24,11 +24,11 @@ const SecondsCounter = () => {
 	const resetCounter = () => {
 		setCounter(0);
 		setTargetValue(0);
-		clearInterval(intervalId); // Detener el intervalo actual
-		const id = setInterval(() => { // Iniciar un nuevo intervalo
+		clearInterval(intervalId); 
+		const id = setInterval(() => { 
 			setCounter(prevCounter => prevCounter + 1);
 		}, 1000);
-		setIntervalId(id); // Actualizar el ID del intervalo
+		setIntervalId(id);
 	};
 
     const handleInputChange = event => {
