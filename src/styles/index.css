@@ -1,7 +1,11 @@
 body {
-    background-image: url("https://www.anahuac.mx/mexico/sites/default/files/styles/webp/public/noticias/El-cronometro-mide-mas-que-solo-el-tiempo.jpg.webp?itok=RDFwlNNP") ;
-    background-size: cover;
+    background-image: url("https://www.anahuac.mx/mexico/sites/default/files/styles/webp/public/noticias/El-cronometro-mide-mas-que-solo-el-tiempo.jpg.webp?itok=RDFwlNNP");
+    background-size: 100% 100%; /* Ajusta el tamaño de la imagen para cubrir completamente el cuerpo */
+    background-position: center; /* Centra la imagen */
     background-repeat: no-repeat;
+    margin: 0; /* Elimina los márgenes predeterminados del cuerpo */
+    padding: 0; /* Elimina el relleno predeterminado del cuerpo */
+    height: 100vh; /* Ajusta la altura del cuerpo para que coincida con la ventana del navegador */
 }
 
 .totalCounter div {
@@ -32,7 +36,6 @@ body {
 
 .buttonStop {
     font-size: 20px;
-    margin-left: 20px;
 }
 
 .buttonRestart {
@@ -48,9 +51,10 @@ body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
-.digits {
-    width: 50px;
+.digit {
+    width: 70px;
     text-align: center;
+    background: rgb(0, 0, 0) !important;
 }
 
 .smallInput {
@@ -62,4 +66,26 @@ body {
 
 .counterNumbers {
     display: flex;
+}
+
+.buttonStop {
+    background: rgb(43, 43, 43);
+}
+
+.buttonReset {
+    background: rgb(43, 43, 43);
+}
+
+.buttonRestart {
+    background: rgb(43, 43, 43);
+}
+
+.inputContainer {
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons {
+    align-items: center;
+    justify-content: center;
 }
