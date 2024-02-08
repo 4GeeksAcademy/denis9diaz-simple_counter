@@ -11,6 +11,7 @@ let running = true;
 
 const stopCounter = () => {
     running = false;
+    clearInterval(intervalId);
 };
 
 const restartCounter = () => {

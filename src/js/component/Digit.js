@@ -5,7 +5,7 @@ const Digit = (props) => {
 
     return (
         <div className="digits container">
-            <div className="digitFive">{props.digit % 10}</div>
+            <div className="digit">{props.digit % 10}</div>
         </div>
     )
 };
