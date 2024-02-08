@@ -1,42 +1,40 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
 import "../styles/index.css";
-
 import SecondsCounter from "./component/SecondsCounter.js";
 
 let counter = 0;
 let intervalId;
-let running = true;
 
 const stopCounter = () => {
-    running = false;
     clearInterval(intervalId);
 };
 
 const restartCounter = () => {
-    running = true;
     intervalId = setInterval(updateCounter, 1000);
 };
 
 const resetCounter = () => {
-    running = true;
-    clearInterval(intervalId); 
+    clearInterval(intervalId);
     counter = 0;
     intervalId = setInterval(updateCounter, 1000);
 };
 
-setInterval(()=>{
-    const digitFive = Math.floor(counter/10000);
-    const digitFour = Math.floor(counter/1000);
-    const digitThree = Math.floor(counter/100);
-    const digitTwo = Math.floor(counter/10);
-    const digitOne = Math.floor(counter/1);
-    
-    console.log(digitFive, digitFour, digitThree, digitTwo, digitOne);
+const updateCounter = () => {
+    ReactDOM.render(
+        <SecondsCounter
+            digitOne={Math.floor(counter / 1) % 10}
+            digitTwo={Math.floor(counter / 10) % 10}
+            digitThree={Math.floor(counter / 100) % 10}
+            digitFour={Math.floor(counter / 1000) % 10}
+            digitFive={Math.floor(counter / 10000) % 10}
+            stopCounter={stopCounter}
+            restartCounter={restartCounter}
+            resetCounter={resetCounter}
+        />,
+        document.querySelector("#app")
+    );
     counter++;
+};
 
-ReactDOM.render(<SecondsCounter digitOne={digitOne} digitTwo={digitTwo} digitThree={digitThree} digitFour={digitFour} digitFive={digitFive} stopCounter={stopCounter} restartCounter={restartCounter} resetCounter={resetCounter}/>, document.querySelector("#app"));
-},1000);
-
-
+intervalId = setInterval(updateCounter, 1000);

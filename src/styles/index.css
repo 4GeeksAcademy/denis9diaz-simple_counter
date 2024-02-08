@@ -28,33 +28,50 @@ body {
     border-radius: 30px; 
     box-shadow: 0px 0px 10px rgb(0, 0, 0); 
     margin-top: 100px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 850px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .buttonStop {
     font-size: 20px;
+    background: rgb(61, 61, 61);
 }
 
 .buttonRestart {
     font-size: 20px;
+    background: rgb(61, 61, 61);
 }
 
 .buttonReset {
     font-size: 20px;
+    background: rgb(61, 61, 61);
 }
 
 .buttons {
     background:black !important;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.digits {
+    width: 50px;
+    text-align: center;
 }
 
 .digit {
     width: 70px;
     text-align: center;
     background: rgb(0, 0, 0) !important;
+}
+
+.counterNumbers {
+    display: flex;
 }
 
 .smallInput {
@@ -64,28 +81,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
-.counterNumbers {
-    display: flex;
-}
-
-.buttonStop {
-    background: rgb(43, 43, 43);
-}
-
-.buttonReset {
-    background: rgb(43, 43, 43);
-}
-
-.buttonRestart {
-    background: rgb(43, 43, 43);
-}
-
 .inputContainer {
-    align-items: center;
-    justify-content: center;
-}
-
-.buttons {
     align-items: center;
     justify-content: center;
 }
