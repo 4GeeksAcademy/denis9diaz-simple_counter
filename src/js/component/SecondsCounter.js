@@ -5,7 +5,7 @@ import Buttons from "./Buttons";
 
 const SecondsCounter = () => {
     const [counter, setCounter] = useState(0);
-    const [targetValue, setTargetValue] = useState(0);
+    const [targetValue, setTargetValue] = useState("Ingrese número para alerta");
     const [intervalId, setIntervalId] = useState(null);
 
     const stopCounter = () => {
