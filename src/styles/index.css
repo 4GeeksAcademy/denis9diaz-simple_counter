@@ -1,11 +1,11 @@
 body {
     background-image: url("https://www.anahuac.mx/mexico/sites/default/files/styles/webp/public/noticias/El-cronometro-mide-mas-que-solo-el-tiempo.jpg.webp?itok=RDFwlNNP");
-    background-size: 100% 100%; /* Ajusta el tamaño de la imagen para cubrir completamente el cuerpo */
-    background-position: center; /* Centra la imagen */
+    background-size: 100% 100%;
+    background-position: center; 
     background-repeat: no-repeat;
-    margin: 0; /* Elimina los márgenes predeterminados del cuerpo */
-    padding: 0; /* Elimina el relleno predeterminado del cuerpo */
-    height: 100vh; /* Ajusta la altura del cuerpo para que coincida con la ventana del navegador */
+    margin: 0; 
+    padding: 0; 
+    height: 100vh; 
 }
 
 .totalCounter div {
