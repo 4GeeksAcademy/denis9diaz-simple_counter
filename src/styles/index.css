@@ -52,12 +52,18 @@ body {
 .buttons {
     background:black !important;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    align-items: center;
+    justify-content: center;
 }
 
 .digit {
     width: 70px;
     text-align: center;
     background: rgb(0, 0, 0) !important;
+}
+
+.counterNumbers {
+    display: flex;
 }
 
 .smallInput {
@@ -67,16 +73,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
-.counterNumbers {
-    display: flex;
-}
-
 .inputContainer {
-    align-items: center;
-    justify-content: center;
-}
-
-.buttons {
     align-items: center;
     justify-content: center;
 }
