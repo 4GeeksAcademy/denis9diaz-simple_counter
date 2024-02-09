@@ -1,7 +1,7 @@
 import React from "react";
 
 const Digit = (props) => {
-    console.log(typeof (props.digitFive))
+    console.log(typeof (props.digit))
 
     return (
         <div className="digits container">
