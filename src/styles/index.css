@@ -59,12 +59,17 @@ body {
 .digits {
     width: 50px;
     text-align: center;
+
 }
 
 .digit {
     width: 70px;
     text-align: center;
     background: transparent;
+}
+
+.counterNumbers {
+    display: flex;
 }
 
 .counterNumbers {
@@ -86,3 +91,4 @@ body {
 .fa-clock {
     font-size: 80px;
 }
+
